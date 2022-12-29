@@ -6,7 +6,7 @@ pipeline{
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                 sh """
                 docker build . -f dockerfile -t karim3000/nodejsapp      
-                docker login -u ${USERNAME} -p {PASSWORD}
+                docker login -u ${USERNAME} -p ${PASSWORD}
                 docker push karim3000/jenkins_docker
                 """
                 }
