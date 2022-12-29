@@ -14,7 +14,7 @@ pipeline{
         }
         stage("CD"){
             steps{
-                sh "docker run -d -p 3000:3000 karim3000/jenkins_docker"
+                sh "docker run -d -p 3000:3000 karim3000/nodejsapp"
             }
         }
     }
