@@ -1,5 +1,5 @@
 pipeline{
-    agent {label 'ec2'}
+    agent {label 'docker'}
     stages{
         stage("CI"){
             steps{
